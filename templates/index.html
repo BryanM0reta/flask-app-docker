@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Lista de Tareas</h1>
+    <form method="POST">
+        <input type="text" name="task" placeholder="Nueva tarea" required>
+        <button type="submit">Agregar</button>
+    </form>
+    <ul>
+        {% for task in tasks %}
+        <li>
+            {{ task.task }} - 
+            {% if not task.completed %}
+            <button onclick="completeTask({{ loop.index0 }})">Completar</button>
+            {% endif %}
+            <button onclick="deleteTask({{ loop.index0 }})">Eliminar</button>
+        </li>
+        {% endfor %}
+    </ul>
+    <script src="/static/script.js"></script>
+</body>
+</html>

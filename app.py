@@ -4,6 +4,9 @@ app = Flask(__name__)
 
 # Lista de tareas
 tasks = []
+# Lista de tareas
+# Lista de tareas
+# Lista de tareas
 
 @app.route("/", methods=["GET", "POST"])
 def index():

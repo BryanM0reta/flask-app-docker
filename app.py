@@ -25,4 +25,7 @@ def delete_task(task_id):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
+<<<<<<< HEAD
 
+=======
+>>>>>>> d328f2b (Descripción breve de los cambios)
